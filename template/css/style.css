@@ -1,0 +1,18 @@
+.categotyList {
+    /* background-color: gray; */
+}
+
+.productOnce {
+    border: 1px gray solid;
+    margin: 2%;
+    padding: 3%;
+}
+
+.active {
+    color: black;
+}
+
+.pagination_count{
+    width: 100%;
+    text-align: center;
+}
