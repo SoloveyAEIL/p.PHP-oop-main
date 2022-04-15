@@ -98,4 +98,46 @@ class User
         header('Location: /user/login');
     }
 
+    // гость ли пользователь?!
+    public static function isGuest()
+    {
+        if (isset($_SESSION['user'])) {
+            return false;
+        }
+        return true;
+    }
+
+    // получение инфо о пользователе из БД (для actionIndex > Cabinet)
+    public static function getUserById($id)
+    {
+
+        if ($id) {
+            $db = Db::getConnection();
+            $sql = 'SELECT * FROM user WHERE id = :id';
+
+            $result = $db->prepare($sql);
+            $result->bindParam(':id', $id, PDO::PARAM_INT);
+            // указ.что хотим получить данные в виде массива
+            $result->setFetchMode(PDO::FETCH_ASSOC);
+            $result->execute();
+
+            return $result->fetch();
+        }
+    }
+
+    // редактирование данных пользователя
+    public static function edit($id, $name, $password)
+    {
+
+        $db = Db::getConnection();
+        $sql = 'UPDATE user SET name = :name, password = :password WHERE id = :id';
+
+        $result = $db->prepare($sql);
+        $result->bindParam(':id', $id, PDO::PARAM_INT);
+        $result->bindParam(':name', $name, PDO::PARAM_STR);
+        $result->bindParam(':password', $password, PDO::PARAM_STR);
+
+        $result->execute();
+    }
+
 }

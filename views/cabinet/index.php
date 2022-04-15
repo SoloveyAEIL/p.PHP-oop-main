@@ -6,10 +6,10 @@
 
             <div style="text-align: center;" class="cabinet_info">
 
-                <h2>Кабинет пользователя </h2>
+                <h2>Кабинет пользователя: <?php echo $user['name']; ?> </h2>
                 <br>
                 <ul>
-                    <li><a href="/user/edit">Редактировать данные</a></li>
+                    <li><a href="/cabinet/edit">Редактировать данные</a></li>
                     <li><a href="/user/history">Список покупок</a></li>
                 </ul>
 

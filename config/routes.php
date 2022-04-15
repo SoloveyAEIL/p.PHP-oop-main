@@ -14,7 +14,7 @@ return array(
     'user/login' => 'user/login',                      //  actionLogin >  UserController
     'user/logout' => 'user/logout',                      //  actionLogout >  UserController
     // кабинет
-    // 'cabinet/edit' => 'cabinet/edit',                   //  actionEdit > CabinetController
+    'cabinet/edit' => 'cabinet/edit',                   //  actionEdit > CabinetController
     'cabinet' => 'cabinet/index',                       //  actionIndex > CabinetController
     // стартовая
     '' => 'site/index',                                 //  actionIndex > SiteController
