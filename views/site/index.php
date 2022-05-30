@@ -35,6 +35,7 @@
                                             <p>ID: <?php echo $product['id']; ?></p>
                                             <p>Price: <?php echo $product['price']; ?> BYN</p>
                                             <br>
+                                            <a href="#" class="btn btn-default add-to-cart" data-id="<?php echo $product['id']; ?>"><i class="fa fa-shopping-cart"></i>В корзину</a>
                                     </div>
                             </div>
                         <?php endforeach; ?>

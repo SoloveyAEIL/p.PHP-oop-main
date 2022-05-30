@@ -20,6 +20,7 @@ class Router
             return trim($_SERVER['REQUEST_URI'], '/');
         }
     }
+    
     // run() -- принимает отправление от FRONT CONTROLLER
     public function run()
     {
